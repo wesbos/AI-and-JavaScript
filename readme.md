@@ -1,3 +1,3 @@
-# Web Dev 2025 Slides
+# AI and JS Slides
 
 WIP
