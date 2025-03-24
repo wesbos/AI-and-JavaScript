@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye Tracking Demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      #gaze-overlay {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 0, 0, 0.5);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+      }
+      .target {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #4caf50;
+        cursor: pointer;
+        transition: transform 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+      }
+      .target:hover {
+        transform: scale(1.1);
+      }
+      #targets {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        margin-top: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .controls {
+        margin: 20px 0;
+      }
+      select {
+        padding: 8px;
+        margin-right: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 16px;
+        font-size: 16px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="gaze-overlay"></div>
+      <h1>Eye Tracking Demo</h1>
+      <p>
+        Click the button below to start eye tracking calibration. Look at each
+        target as you click it.
+      </p>
+      <div class="controls">
+        <select id="cameraSelect" disabled>
+          <option value="">Loading cameras...</option>
+        </select>
+        <button id="startButton">Start Calibration</button>
+      </div>
+      <div id="targets"></div>
+    </div>
+    <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

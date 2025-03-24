@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="module" src="./slides.js"></script>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="https://fav.farm/👨‍💻" />
+    <title>JavaScript & AI</title>
+    <!-- <script type="module" src="./spanran-wrap.ts"></script> -->
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+    <section class="slides layout-regular template-default">
+      <article style="--display: block">
+        <h1>JavaScript & AI</h1>
+        <p>Wes Bos × @wesbos × wesbos.com</p>
+      </article>
+
+      <article style="align-content: center; grid-auto-rows: auto">
+        <h1><mark>Hi, I'm Wes Bos</mark></h1>
+        <p class="sub">Hamilton, On 🇨🇦</p>
+        <p class="sub">
+          @wesbos for skeets, 𝕏eets, gramz, toks, tubes and suits
+        </p>
+      </article>
+      <article>
+        <div class="columns">
+          <div>
+            <h2>Web<br />Dev<br />Courses</h2>
+          </div>
+          <div>+</div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/syntaxfm/brand/main/Syntax%20Wordmark%20Stacked%20-%20yellow.svg"
+            />
+            <p>syntax.fm × @syntaxfm × sentry</p>
+          </div>
+        </div>
+      </article>
+
+      <article>
+        <h2>Using AI</h2>
+      </article>
+
+      <article>
+        <!-- INSERT OPEN AI CODE HERE -->
+        <p>Interacting with an API and a cloud provider</p>
+      </article>
+
+      <article>
+        <p>OR decending into the hell that is Python</p>
+      </article>
+
+      <article>
+        <p>But, I love JavaScript!</p>
+      </article>
+
+      <article>
+        <video src="/videos/receipt.mp4" autoplay muted loop></video>
+      </article>
+
+      <article>
+        <video src="/videos/roomba-clip.mp4" autoplay muted loop></video>
+      </article>
+
+      <article>
+        <p>
+          While much of the AI world is built on Python, advancements in
+          JavaScript mean we can run many models in JavaScript.
+        </p>
+      </article>
+      <article>
+        <div class="side-by-side">
+          <p>(skill issue)</p>
+          <img src="./images/python-hell.png" alt="" class="fit" />
+        </div>
+      </article>
+
+      <article>
+        <p>
+          Models that are Fast Enough, Small Enough, and Purpose Built can run
+          in JavaScript!
+        </p>
+      </article>
+
+      <article>
+        <h2>WebGPU</h2>
+        <p>
+          Many models have been "fast enough" for JavaScript, but now with
+          WebGPU the speeds are incredible.
+        </p>
+      </article>
+
+      <article>
+        <h2>Why?</h2>
+        <p>Why would you want to run a model in JavaScript?</p>
+      </article>
+
+      <article>
+        <h2>Speed</h2>
+        <p>When latency is a concern, you need to do it on-device</p>
+      </article>
+
+      <article>
+        <video src="/videos/reps.mp4" autoplay muted loop></video>
+      </article>
+
+      <article>
+        <h2>Speech Recognition</h2>
+        <a href="https://huggingface.co/spaces/Xenova/realtime-whisper-webgpu">
+          [whisper web]
+        </a>
+        <img src="./images/whisper.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <h2>Text To Speech</h2>
+        <img src="./images/tts.png" alt="" class="fit" />
+      </article>
+      <article>
+        <script type="module" src="./demos/tts/tts.ts"></script>
+        <link rel="stylesheet" href="./demos/tts/style.css" />
+        <div id="tts">
+          <textarea name="text" id="text">
+Enter text to convert to speech! Go on, I'll wait...</textarea
+          >
+          <select name="voices" id="voices"></select>
+          <audio id="audio" controls></audio>
+          <button id="generate">Generate</button>
+          <p class="stats"></p>
+        </div>
+      </article>
+
+      <article>
+        <h2>Security & Privacy</h2>
+        <p>
+          Uploading your data to a random website might not be a good idea for
+          some types of content.
+        </p>
+      </article>
+
+      <article>
+        <video src="/videos/bg-remover-clip.mp4" autoplay muted loop></video>
+      </article>
+
+      <article>
+        <h2>Cost</h2>
+        <p>AI is Amazing, but cloud models can get expensive.</p>
+        <p>
+          When the cost of AI becomes almost nothing, new features start to make
+          a lot of sense.
+        </p>
+      </article>
+
+      <article>
+        <img src="./images/captions.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <video
+          src="/videos/alt-text-generation.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </article>
+
+      <article>
+        <img src="./images/segmentation.png" alt="" class="wide" />
+      </article>
+
+      <article>
+        <img src="./images/translate2.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <h2>The AI needs to be part of the UI</h2>
+      </article>
+
+      <article>
+        <!-- DEMO: Eye Tracking  -->
+      </article>
+
+      <article>
+        <!-- DEMO: Doodle detection? -->
+      </article>
+
+      <article>
+        <!-- Segmentation -->
+        <!-- Depth Detection -->
+        <!-- Image to Image -->
+        <!-- Clothing article segmentation?  https://huggingface.co/Xenova/segformer_b0_clothes -->
+      </article>
+
+      <article>
+        <!-- DEPth deptection? -->
+      </article>
+
+      <article>
+        <img src="./iages/sapiens-depth.png" alt="" class="wide" />
+      </article>
+
+      <article>
+        <h2>The AI needs to be part of the Workflow</h2>
+      </article>
+
+      <article>
+        <h2>Toxicity Detection</h2>
+        <img src="./images/toxicity.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="./images/toxic.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <h2>How?</h2>
+        <p>Let's talk about the tech</p>
+      </article>
+
+      <article>
+        <h2>So how is this happening?</h2>
+        <p>There are several things going on right now...</p>
+      </article>
+
+      <article>
+        <h2>Model Conversion</h2>
+        <p>
+          Models are converted to formats that work in a JavaScript runtime:
+        </p>
+        <ul>
+          <li>ONNX</li>
+          <li>Tensorflow.js</li>
+          <li>Tensorflow Lite</li>
+        </ul>
+      </article>
+      <article>
+        <p>There are hundreds of models out there ready to be used.</p>
+        <!-- TODO: Rattle throygh a whole bunch of examples -->
+      </article>
+
+      <article>
+        <h2>JavaScript Libraries</h2>
+        <p>Libraries load and consume these models with JavaScript APIs:</p>
+        <ul>
+          <li>Transformers.js</li>
+          <li>Tensorflow.js</li>
+          <li>MediaPipe</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Runtime Options</h2>
+        <p>Models can run on the CPU via WASM:</p>
+        <ul>
+          <li>Browser</li>
+          <li>Web Worker</li>
+          <li>Server</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>GPU Acceleration with WebGPU</h2>
+        <p>Models can run on GPU with new WebGPU APIs</p>
+        <p class="sub">Including platforms like Deno!</p>
+        <!-- {SCREENSHOT OF SUPPORT} -->
+      </article>
+
+      <article>
+        <h2>Experimental Chrome APIs</h2>
+        <p>Chrome is experimenting with APIs to run system-shipped models</p>
+        <!-- [Chrome API EXAMPLE] -->
+      </article>
+
+      <!-- TODO: Add Speed and file size -->
+
+      <article>
+        <p>
+          While JavaScript isn't the best language for AI, there are many cases
+          where it makes sense and is the best tool for the job.
+        </p>
+      </article>
+
+      <article>
+        <h1>That's all!</h1>
+        <p>Go make things.</p>
+        <p>Enjoy the future of how awesome everything is!</p>
+      </article>
+
+      <article>
+        <h1>Thanks</h1>
+        <p>@wesbos</p>
+      </article>
+    </section>
+  </body>
+</html>

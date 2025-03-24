@@ -1,0 +1,346 @@
+@import "_deps.css";
+
+:root {
+  --color1: #ff00fa;
+  --pink: #ff018a;
+  --color2: #0ff;
+  --color3: #240066;
+  --color-vanilla: #fffcee;
+  --color-black: #000;
+  --i: 0.05;
+  --green: #b5ff01;
+  --noCalc: calc(var(--i) * 2);
+  --fogColor: hsl(calc(243 + var(--i) * 255), 100%, 68%);
+  --sickGradient: radial-gradient(
+    farthest-corner circle at 50% 115% in oklch,
+    oklch(80% 0.3 34) 0%,
+    oklch(90% 0.3 200) 100%
+  );
+  --coolGradient: linear-gradient(
+    115deg,
+    var(--color1) 11% 11%,
+    var(--color2) 101% 101%,
+    var(--color3) 100%
+  );
+  --gradColor1: hsl(50, 100%, 68%);
+  --gradColor2: hsl(200, 100%, 68%);
+  /* --rainbow: linear-gradient(to right in hsl longer hue, red 0% 100%); */
+  --startColor: hsl(0, 100%, 66%);
+  --rainbow: linear-gradient(
+    to right in hsl longer hue,
+    var(--startColor) 0% 100%
+  );
+  --gradient: linear-gradient(
+    125deg,
+    ` var(--gradColor1) 0%,
+    var(--gradColor2) 100%
+  );
+  --yellow: #ffc600;
+}
+
+mark {
+  background: var(--yellow);
+}
+
+span.word {
+  display: inline-block;
+  /* border: 2px solid red; */
+}
+
+span.space,
+span.punctuation {
+  display: inline-block;
+  /* border: 2px solid blue; */
+  white-space: pre-wrap;
+}
+span.space {
+  width: 0.3ch;
+}
+
+span.letter {
+  /* border: 1.5px solid white; */
+  /* background: black; */
+  display: inline-block;
+  animation: tilt 1s infinite;
+  animation-timing-function: steps(2);
+  /*
+  --left: -2deg;
+  --right: 2deg; */
+}
+
+@keyframes tilt {
+  from {
+    rotate: var(--left);
+  }
+  to {
+    rotate: var(--right);
+  }
+}
+
+body {
+  color: var(--color-vanilla);
+  /* background: white url("./images/grunge.png"); */
+  background: white url("./images/AU-FG-Texture4-8K.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  --w: 2220px;
+  --h: 1180px;
+  background-size: var(--w) var(--h);
+  font-family: "swell", "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  text-wrap: balance;
+  letter-spacing: 0.05em;
+  color: var(--green);
+  paint-order: stroke fill;
+  display: inline-block;
+  --stroke: hsla(from var(--color-black) h s calc(l - 5) / 1);
+  -webkit-text-stroke: 10px var(--stroke);
+  --shadow: rgba(255, 255, 255, 0.2);
+  mix-blend-mode: multiply;
+  /* --shadow: red; */
+  filter: drop-shadow(0px 10px 9px var(--shadow));
+  text-shadow: 0px 0 219px var(--green);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("./images/grunge.png");
+    height: 100%;
+    z-index: 2;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    display: none;
+  }
+}
+
+p,
+li {
+  font-family: "geoform", "geist mono", monospace;
+  font-weight: 500;
+  font-size: 50px;
+  text-wrap: balance;
+  color: white;
+  text-shadow: 0px 0 90px white;
+  -webkit-text-stroke: 6px var(--color-black);
+  paint-order: stroke fill;
+}
+
+p {
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 250px;
+}
+h2 {
+  font-size: 120px;
+}
+h3 {
+  font-size: 150px;
+}
+h4 {
+  font-size: 70px;
+}
+
+img.fit {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: none;
+}
+
+img.wide {
+  width: 100%;
+  height: auto;
+}
+
+.slides > article.current.grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 50px !important;
+  place-items: center;
+  width: 100%;
+  justify-content: center;
+  & img {
+    max-width: 200px;
+  }
+  & h1,
+  & h2 {
+    grid-column: 1 / -1;
+    height: 100%;
+  }
+  & > *:not(style) {
+    display: initial;
+  }
+}
+
+/*
+  <article>
+    <img>
+  </article>
+*/
+article:has(> :is(img, video):only-child) {
+  padding: 0;
+  grid-auto-rows: 100%;
+  & > * {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: contain;
+  }
+}
+
+/*
+  <article>
+    <h2></h2>
+    <img> or <video>
+  </article>
+*/
+article:has(& > :is(h2, .title) + :is(img, video)):not(
+    :has(& > :nth-child(3))
+  ) {
+  /* background: red; */
+  grid-template-rows: auto minmax(0, 1fr);
+  align-items: center;
+  align-content: space-evenly;
+  justify-items: stretch;
+  justify-content: stretch;
+  gap: 20px;
+  img,
+  video {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.title {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+}
+
+/*
+  Selects Slide Layouts that look like this:
+  <article>
+    <h#></h#> - Any Heading
+    <p></p> - OR one of p, ul, ol, blockquote, pre
+  </article>
+*/
+article:has(
+    > :is(h1, h2, h3, h4, h4, h5, h6) + :is(p, ul, ol, blockquote, pre)
+  ) {
+  align-content: center;
+  gap: 50px;
+}
+
+/*
+  Selects Slide Layouts that look like this:
+  <article>
+    <h#></h#>
+  </article>
+*/
+article:has(> :is(h1, h2, h3, h4, h4, h5, h6):only-child) {
+  padding: 5rem;
+  & > * {
+    font-size: 200px;
+  }
+}
+
+.columns {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+article:has(& > .side-by-side) {
+  align-items: stretch;
+}
+
+.side-by-side {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  height: min-content;
+  text-align: right;
+  &:has(h1, h2, h3, h4, h5, h6) {
+    grid-template-columns: minmax(20%, 30%) 1fr;
+    gap: 50px;
+    align-content: center;
+    align-items: center;
+  }
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    background: #183549;
+    object-fit: contain;
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  img {
+    height: 100px;
+    width: auto;
+  }
+}
+
+.buzz-word-grid {
+  /* display: flex; */
+  width: 100%;
+  text-align: left;
+  /* CSS columns */
+  columns: 2;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  /* Select the parent slide that has this element */
+  li {
+    padding: 10px;
+  }
+  article:has(&) {
+    /* --display: block; */
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/AU-FG-Texture7-8K.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  z-index: 1;
+  pointer-events: none;
+}
