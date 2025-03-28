@@ -18,7 +18,7 @@
       </article>
 
       <article style="align-content: center; grid-auto-rows: auto">
-        <h1><mark>Hi, I'm Wes Bos</mark></h1>
+        <h1>Hi, I'm Wes Bos</h1>
         <p class="sub">Hamilton, On 🇨🇦</p>
         <p class="sub">
           @wesbos for skeets, 𝕏eets, gramz, toks, tubes and suits
@@ -41,19 +41,25 @@
 
       <article>
         <h2>Using AI</h2>
+        <p>Two popular paths</p>
       </article>
 
       <article>
-        <!-- INSERT OPEN AI CODE HERE -->
-        <p>Interacting with an API and a cloud provider</p>
+        <div class="side-by-side">
+          <div>
+            <p>Interacting with an API and a cloud provider</p>
+            <img src="./images/keys.png" alt="" class="fit">
+          </div>
+          <div>
+            <p>OR decending into the hell that is Python</p>
+            <img src="./images/python-hell.png" alt="" class="fit" />
+          </div>
+        </div>
       </article>
 
-      <article>
-        <p>OR decending into the hell that is Python</p>
-      </article>
 
       <article>
-        <p>But, I love JavaScript!</p>
+        <h1>But, I love JavaScript!</h1>
       </article>
 
       <article>
@@ -67,28 +73,15 @@
       <article>
         <p>
           While much of the AI world is built on Python, advancements in
-          JavaScript mean we can run many models in JavaScript.
-        </p>
-      </article>
-      <article>
-        <div class="side-by-side">
-          <p>(skill issue)</p>
-          <img src="./images/python-hell.png" alt="" class="fit" />
-        </div>
-      </article>
-
-      <article>
-        <p>
-          Models that are Fast Enough, Small Enough, and Purpose Built can run
-          in JavaScript!
+          JavaScript mean we can run many models in JavaScript!
         </p>
       </article>
 
       <article>
-        <h2>WebGPU</h2>
+        <img src="./images/webgpu.svg" alt="" width="100">
         <p>
           Many models have been "fast enough" for JavaScript, but now with
-          WebGPU the speeds are incredible.
+          WebGPU the speeds are blazing fast.
         </p>
       </article>
 
@@ -98,8 +91,8 @@
       </article>
 
       <article>
-        <h2>Speed</h2>
-        <p>When latency is a concern, you need to do it on-device</p>
+        <h2>1. Speed</h2>
+        <p>When latency is a concern, do it on-device!</p>
       </article>
 
       <article>
@@ -135,10 +128,9 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h2>Security & Privacy</h2>
+        <h1>Security & Privacy</h1>
         <p>
-          Uploading your data to a random website might not be a good idea for
-          some types of content.
+          Uploading your data to a random website might not be a good idea
         </p>
       </article>
 
@@ -147,8 +139,8 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h2>Cost</h2>
-        <p>AI is Amazing, but cloud models can get expensive.</p>
+        <h1>Cost</h>
+        <!-- <p>AI is Amazing, but cloud models can get expensive.</p> -->
         <p>
           When the cost of AI becomes almost nothing, new features start to make
           a lot of sense.
@@ -156,6 +148,7 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
+        <h2>Caption / Alt Text Generation</h2>
         <img src="./images/captions.png" alt="" class="fit" />
       </article>
 
@@ -168,12 +161,17 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
         ></video>
       </article>
 
+      <!-- TODO: Find a spot for this -->
       <article>
+        <h2>Image Segmentation</h2>
         <img src="./images/segmentation.png" alt="" class="wide" />
       </article>
 
+
+      <!-- TODO: Make this fit -->
       <article>
-        <img src="./images/translate-code.png" alt="" class="fit" />
+        <h2>Translation</h2>
+        <img src="./images/translate-code.png" alt="" class="wide" />
       </article>
 
       <article>
@@ -181,12 +179,18 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h2>The AI needs to be part of the UI</h2>
+        <h2>When the AI needs to be part of the UI</h2>
       </article>
-
+<!--
       <article>
         <video src="./videos/face-mesh.mp4" autoplay muted loop></video>
+      </article> -->
+
+            <article>
+        <h2>MediaPipe</h2>
+        <video src="./videos/mediapipe.mp4" autoplay muted loop></video>
       </article>
+
 
       <article>
         <video src="./videos/doodle-dash.mp4" autoplay muted loop></video>
@@ -197,7 +201,7 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <img src="./iages/sapiens-depth.png" alt="" class="wide" />
+        <img src="./images/sapiens-depth.png" alt="" class="wide" />
       </article>
 
       <article>
@@ -205,11 +209,11 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h2>Toxicity Detection</h2>
-        <img src="./images/toxicity.png" alt="" class="fit" />
+        <img src="./images/receipt.png" alt="" class="fit" />
       </article>
 
       <article>
+        <h2>Toxicity Detection</h2>
         <img src="./images/toxic.png" alt="" class="fit" />
       </article>
 
@@ -221,15 +225,34 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
         <img src="./images/tweet.png" alt="" class="fit" />
       </article>
 
+
       <article>
-        <h2>How?</h2>
+        <h2>So how is this happening?</h2>
         <p>Let's talk about the tech</p>
       </article>
 
       <article>
-        <h2>So how is this happening?</h2>
-        <p>There are several things going on right now...</p>
+        <h2>JavaScript Libraries</h2>
+        <p>Libraries load and consume these models with JavaScript APIs:</p>
+        <ul>
+          <li>Transformers.js</li>
+          <li>Tensorflow.js</li>
+          <li>MediaPipe</li>
+          <li>WebLLM</li>
+          <li>window.ai</li>
+          <li>+ more</li>
+        </ul>
       </article>
+
+      <article>
+        <h2>Experimental Chrome APIs</h2>
+        <p>Chrome is experimenting with APIs to run system-shipped models</p>
+      </article>
+
+      <article>
+        <img src="./images/chrome-apis.png" alt="" class="wide" />
+      </article>
+
 
       <article>
         <h2>Model Conversion</h2>
@@ -298,21 +321,6 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
         </ul>
       </article>
 
-      <article>
-        <h2>JavaScript Libraries</h2>
-        <p>Libraries load and consume these models with JavaScript APIs:</p>
-        <ul>
-          <li>Transformers.js</li>
-          <li>Tensorflow.js</li>
-          <li>MediaPipe</li>
-          <li>WebLLM</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>MediaPipe</h2>
-        <video src="./videos/mediapipe.mp4" autoplay muted loop></video>
-      </article>
 
       <article>
         <h2>Runtime Options</h2>
@@ -334,35 +342,35 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <img src="./images/caption-webgpu.png" alt="" class="wide" />
-        <img src="./images/caption-cpu.png" alt="" class="wide" />
+        <div class="side-by-side even">
+          <div>
+            <p class="center">CPU -  7008ms</p>
+            <img style="height: 85%;" src="./images/caption-cpu.png" alt="" class="wide" />
+          </div>
+          <div>
+            <p class="center" >WebGPU - 576ms</p>
+            <img style="height: 85%;" src="./images/caption-webgpu.png" alt="" class="wide" />
+          </div>
+        </div>
       </article>
 
       <article>
         <h2>Tradeoffs</h2>
-      <article>
-        <h2>Tradeoffs</h2>
-        <p>Should you be running this in the browser?</p>
-        <p>We talked about the positives - security, privacy, speed, etc.</p>
+        <!-- <p>Should you be running this in the browser?</p> -->
+        <!-- <p>We talked about the positives - security, privacy, speed, etc.</p> -->
         <p>
-          But there are some tradeoffs to consider:
+          There are some tradeoffs to consider:
+        </p>
           <ul class="build">
             <li>LLM's take up space</li>
+            <li>Currently ONNX has a 2GB model limit</li>
             <li>A paid LLM might be better</li>
             <li>Using your user's CPU/GPU leaves much of the experience up to their device</li>
             <li>Need to consider battery usage</li>
           </ul>
-        </p>
       </article>
 
-      <article>
-        <h2>Experimental Chrome APIs</h2>
-        <p>Chrome is experimenting with APIs to run system-shipped models</p>
-      </article>
 
-      <article>
-        <img src="./images/chrome-apis.png" alt="" class="wide" />
-      </article>
 
       <article>
         <p>
