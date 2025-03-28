@@ -103,6 +103,7 @@
       </article>
 
       <article>
+        <h2>Pose Detection</h2>
         <video src="/videos/reps.mp4" autoplay muted loop></video>
       </article>
 
@@ -111,6 +112,7 @@
         <a href="https://huggingface.co/spaces/Xenova/realtime-whisper-webgpu">
           [whisper web]
         </a>
+        <!-- TODO2: Embed an example -->
         <img src="./images/whisper.png" alt="" class="fit" />
       </article>
 
@@ -127,7 +129,7 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
           >
           <select name="voices" id="voices"></select>
           <audio id="audio" controls></audio>
-          <button id="generate">Generate</button>
+          <button id="generate">Generate speech!</button>
           <p class="stats"></p>
         </div>
       </article>
@@ -171,7 +173,11 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <img src="./images/translate2.png" alt="" class="fit" />
+        <img src="./images/translate-code.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="./images/translate-output.png" alt="" class="fit">
       </article>
 
       <article>
@@ -179,22 +185,15 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <!-- DEMO: Eye Tracking  -->
+        <video src="./videos/face-mesh.mp4" autoplay muted loop></video>
       </article>
 
       <article>
-        <!-- DEMO: Doodle detection? -->
+        <video src="./videos/doodle-dash.mp4" autoplay muted loop></video>
       </article>
 
       <article>
-        <!-- Segmentation -->
-        <!-- Depth Detection -->
-        <!-- Image to Image -->
-        <!-- Clothing article segmentation?  https://huggingface.co/Xenova/segformer_b0_clothes -->
-      </article>
-
-      <article>
-        <!-- DEPth deptection? -->
+        <video src="./videos/depth.mp4" autoplay muted loop></video>
       </article>
 
       <article>
@@ -212,6 +211,14 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
 
       <article>
         <img src="./images/toxic.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="./images/tweet-pre.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="./images/tweet.png" alt="" class="fit" />
       </article>
 
       <article>
@@ -235,9 +242,60 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
           <li>Tensorflow Lite</li>
         </ul>
       </article>
+
       <article>
-        <p>There are hundreds of models out there ready to be used.</p>
-        <!-- TODO: Rattle throygh a whole bunch of examples -->
+        <p>
+          There are <strong>hundreds</strong> thousands of models out there
+          ready to be used.
+        </p>
+        <ul class="jumble">
+          <li>
+            <strong>Natural Language Processing</strong>
+            <ul>
+              <li>Fill-Mask</li>
+              <li>Question Answering</li>
+              <li>Sentence Similarity</li>
+              <li>Summarization</li>
+              <li>Text Classification</li>
+              <li>Text Generation</li>
+              <li>Text-to-text Generation</li>
+              <li>Token Classification</li>
+              <li>Translation</li>
+              <li>Zero-Shot Classification</li>
+              <li>Feature Extraction</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Vision</strong>
+            <ul>
+              <li>Background Removal</li>
+              <li>Depth Estimation</li>
+              <li>Image Classification</li>
+              <li>Image Segmentation</li>
+              <li>Image-to-Image</li>
+              <li>Object Detection</li>
+              <li>Image Feature Extraction</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Audio</strong>
+            <ul>
+              <li>Audio Classification</li>
+              <li>Automatic Speech Recognition</li>
+              <li>Text-to-Speech</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Multimodal</strong>
+            <ul>
+              <li>Document Question Answering</li>
+              <li>Image-to-Text</li>
+              <li>Zero-Shot Audio Classification</li>
+              <li>Zero-Shot Image Classification</li>
+              <li>Zero-Shot Object Detection</li>
+            </ul>
+          </li>
+        </ul>
       </article>
 
       <article>
@@ -247,7 +305,13 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
           <li>Transformers.js</li>
           <li>Tensorflow.js</li>
           <li>MediaPipe</li>
+          <li>WebLLM</li>
         </ul>
+      </article>
+
+      <article>
+        <h2>MediaPipe</h2>
+        <video src="./videos/mediapipe.mp4" autoplay muted loop></video>
       </article>
 
       <article>
@@ -255,10 +319,12 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
         <p>Models can run on the CPU via WASM:</p>
         <ul>
           <li>Browser</li>
-          <li>Web Worker</li>
-          <li>Server</li>
+          <li>Web Workers</li>
+          <li>Server — Deno, Node, Bun...</li>
         </ul>
       </article>
+
+      <!-- Ryan dhals tweet? -->
 
       <article>
         <h2>GPU Acceleration with WebGPU</h2>
@@ -268,12 +334,35 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h2>Experimental Chrome APIs</h2>
-        <p>Chrome is experimenting with APIs to run system-shipped models</p>
-        <!-- [Chrome API EXAMPLE] -->
+        <img src="./images/caption-webgpu.png" alt="" class="wide" />
+        <img src="./images/caption-cpu.png" alt="" class="wide" />
       </article>
 
-      <!-- TODO: Add Speed and file size -->
+      <article>
+        <h2>Tradeoffs</h2>
+      <article>
+        <h2>Tradeoffs</h2>
+        <p>Should you be running this in the browser?</p>
+        <p>We talked about the positives - security, privacy, speed, etc.</p>
+        <p>
+          But there are some tradeoffs to consider:
+          <ul class="build">
+            <li>LLM's take up space</li>
+            <li>A paid LLM might be better</li>
+            <li>Using your user's CPU/GPU leaves much of the experience up to their device</li>
+            <li>Need to consider battery usage</li>
+          </ul>
+        </p>
+      </article>
+
+      <article>
+        <h2>Experimental Chrome APIs</h2>
+        <p>Chrome is experimenting with APIs to run system-shipped models</p>
+      </article>
+
+      <article>
+        <img src="./images/chrome-apis.png" alt="" class="wide" />
+      </article>
 
       <article>
         <p>

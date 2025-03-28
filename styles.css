@@ -92,6 +92,18 @@ body {
 
 /* Text */
 
+@keyframes glow {
+  to {
+    --glow: 260px;
+  }
+}
+
+@property --glow {
+  syntax: "<length>";
+  initial-value: 260px;
+  inherits: false;
+}
+
 h1,
 h2,
 h3,
@@ -112,9 +124,9 @@ h6 {
   -webkit-text-stroke: 10px var(--stroke);
   --shadow: rgba(255, 255, 255, 0.2);
   mix-blend-mode: multiply;
-  /* --shadow: red; */
   filter: drop-shadow(0px 10px 9px var(--shadow));
-  text-shadow: 0px 0 219px var(--green);
+  /* animation: glow 1s infinite alternate; */
+  text-shadow: 0px 0 var(--glow) var(--green);
   &:after {
     content: "";
     position: absolute;
@@ -343,4 +355,24 @@ article:has(& > .side-by-side) {
   mix-blend-mode: multiply;
   z-index: 1;
   pointer-events: none;
+}
+
+ul.jumble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  text-align: left;
+  ul {
+    margin: 0;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+  }
+  strong {
+    background: var(--green);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
 }

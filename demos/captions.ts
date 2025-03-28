@@ -3,8 +3,10 @@ import { pipeline } from '@huggingface/transformers';
 async function generateCaptions() {
   // Initialize the captioner
   const captioner = await pipeline('image-to-text', 'Xenova/vit-gpt2-image-captioning', {
-    device: 'webgpu',
+    device: 'wasm',
   });
+
+  // const caption = await captioner()
 
   // Get all image elements
   const imageContainers = document.querySelectorAll('.image');
