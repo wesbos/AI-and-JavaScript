@@ -7,12 +7,14 @@
   padding: 2rem;
   background: #f8f9fa;
   border-radius: 8px;
+  font-size: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.5);
 }
 
 #tts button {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 2rem;
   background: var(--green);
   color: black;
   border: none;
@@ -27,9 +29,9 @@
 
 #tts textarea {
   width: 100%;
-  min-height: 150px;
+  min-height: 250px;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 2rem;
   border: 1px solid #dee2e6;
   border-radius: 4px;
   resize: vertical;
@@ -37,7 +39,7 @@
 
 #tts select {
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 2rem;
   border: 1px solid #dee2e6;
   border-radius: 4px;
   background: white;
@@ -51,6 +53,8 @@
 
 #tts .stats {
   margin: 0;
-  font-size: 0.9rem;
-  color: #6c757d;
+  font-size: 2rem;
+  text-shadow: 0;
+  -webkit-text-stroke: 0;
+  color: black;
 }

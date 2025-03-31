@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "vite . --port 6969",
-    "build": "vite build --out-dir docs --base=/webdev-2025-talk/"
+    "build": "vite build"
   },
   "author": "",
   "license": "ISC",

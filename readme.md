@@ -1,3 +1,3 @@
 # AI and JS Slides
 
-WIP
+[slides](https://wesbos.githubio/AI-and-JavaScript)

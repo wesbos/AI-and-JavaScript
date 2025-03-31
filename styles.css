@@ -229,7 +229,6 @@ article:has(> :is(img, video):only-child) {
 article:has(& > :is(h2, .title) + :is(img, video)):not(
     :has(& > :nth-child(3))
   ) {
-  /* background: red; */
   grid-template-rows: auto minmax(0, 1fr);
   align-items: center;
   align-content: space-evenly;

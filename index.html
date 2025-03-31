@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <!-- TODO: zero videos out on focus -->
     <div class="overlay"></div>
     <section class="slides layout-regular template-default">
       <article style="--display: block">
@@ -47,16 +48,15 @@
       <article>
         <div class="side-by-side">
           <div>
-            <p>Interacting with an API and a cloud provider</p>
-            <img src="./images/keys.png" alt="" class="fit">
+            <p class="center">Interacting with an API and a cloud provider</p>
+            <img src="./images/keys.png" alt="" class="fit" />
           </div>
           <div>
-            <p>OR decending into the hell that is Python</p>
+            <p class="center">OR decending into the hell that is Python</p>
             <img src="./images/python-hell.png" alt="" class="fit" />
           </div>
         </div>
       </article>
-
 
       <article>
         <h1>But, I love JavaScript!</h1>
@@ -71,27 +71,32 @@
       </article>
 
       <article>
+        <h2 style="font-size: 5.5rem">
+          While much of the AI world is built on Python, advancements in JS mean
+          we can run many models in JavaScript!
+        </h2>
+      </article>
+
+      <article>
+        <img
+          src="https://www.w3.org/2023/02/webgpu-logos/webgpu-white.svg"
+          alt=""
+          width="500"
+        />
         <p>
-          While much of the AI world is built on Python, advancements in
-          JavaScript mean we can run many models in JavaScript!
+          Many models have been <em>fast enough</em> for JavaScript, but now
+          with WebGPU the speeds are <em>blazing fast</em>.
         </p>
       </article>
 
       <article>
-        <img src="./images/webgpu.svg" alt="" width="100">
-        <p>
-          Many models have been "fast enough" for JavaScript, but now with
-          WebGPU the speeds are blazing fast.
-        </p>
-      </article>
-
-      <article>
-        <h2>Why?</h2>
+        <h1>Why?</h1>
         <p>Why would you want to run a model in JavaScript?</p>
       </article>
 
       <article>
-        <h2>1. Speed</h2>
+        <p class="reason">Reason #1</p>
+        <h1>Speed</h1>
         <p>When latency is a concern, do it on-device!</p>
       </article>
 
@@ -118,7 +123,7 @@
         <link rel="stylesheet" href="./demos/tts/style.css" />
         <div id="tts">
           <textarea name="text" id="text">
-Enter text to convert to speech! Go on, I'll wait...</textarea
+Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript!</textarea
           >
           <select name="voices" id="voices"></select>
           <audio id="audio" controls></audio>
@@ -128,10 +133,9 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
+        <p class="reason">Reason #2</p>
         <h1>Security & Privacy</h1>
-        <p>
-          Uploading your data to a random website might not be a good idea
-        </p>
+        <p>Uploading your data to a random website might not be a good idea</p>
       </article>
 
       <article>
@@ -139,7 +143,8 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h1>Cost</h>
+        <p class="reason">Reason #3</p>
+        <h1>Cost</h1>
         <!-- <p>AI is Amazing, but cloud models can get expensive.</p> -->
         <p>
           When the cost of AI becomes almost nothing, new features start to make
@@ -164,33 +169,32 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       <!-- TODO: Find a spot for this -->
       <article>
         <h2>Image Segmentation</h2>
-        <img src="./images/segmentation.png" alt="" class="wide" />
+        <img src="./images/segmentation.png" alt="" />
       </article>
-
 
       <!-- TODO: Make this fit -->
       <article>
         <h2>Translation</h2>
-        <img src="./images/translate-code.png" alt="" class="wide" />
+        <img src="./images/translate-code.png" alt="" style="height: 900px" />
       </article>
 
       <article>
-        <img src="./images/translate-output.png" alt="" class="fit">
+        <img src="./images/translate-output.png" alt="" class="fit" />
       </article>
 
       <article>
-        <h2>When the AI needs to be part of the UI</h2>
+        <p class="reason">Reason #4</p>
+        <h1>When the AI needs to be part of the UI</h1>
       </article>
-<!--
+      <!--
       <article>
         <video src="./videos/face-mesh.mp4" autoplay muted loop></video>
       </article> -->
 
-            <article>
+      <article>
         <h2>MediaPipe</h2>
         <video src="./videos/mediapipe.mp4" autoplay muted loop></video>
       </article>
-
 
       <article>
         <video src="./videos/doodle-dash.mp4" autoplay muted loop></video>
@@ -205,7 +209,8 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       </article>
 
       <article>
-        <h2>The AI needs to be part of the Workflow</h2>
+        <p class="reason">Reason #5</p>
+        <h1>The AI needs to be part of the Workflow</h1>
       </article>
 
       <article>
@@ -224,7 +229,6 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       <article>
         <img src="./images/tweet.png" alt="" class="fit" />
       </article>
-
 
       <article>
         <h2>So how is this happening?</h2>
@@ -252,7 +256,6 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       <article>
         <img src="./images/chrome-apis.png" alt="" class="wide" />
       </article>
-
 
       <article>
         <h2>Model Conversion</h2>
@@ -321,7 +324,6 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
         </ul>
       </article>
 
-
       <article>
         <h2>Runtime Options</h2>
         <p>Models can run on the CPU via WASM:</p>
@@ -344,12 +346,22 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
       <article>
         <div class="side-by-side even">
           <div>
-            <p class="center">CPU -  7008ms</p>
-            <img style="height: 85%;" src="./images/caption-cpu.png" alt="" class="wide" />
+            <p class="center">CPU - 7008ms</p>
+            <img
+              style="height: 85%"
+              src="./images/caption-cpu.png"
+              alt=""
+              class="wide"
+            />
           </div>
           <div>
-            <p class="center" >WebGPU - 576ms</p>
-            <img style="height: 85%;" src="./images/caption-webgpu.png" alt="" class="wide" />
+            <p class="center">WebGPU - 576ms</p>
+            <img
+              style="height: 85%"
+              src="./images/caption-webgpu.png"
+              alt=""
+              class="wide"
+            />
           </div>
         </div>
       </article>
@@ -358,25 +370,31 @@ Enter text to convert to speech! Go on, I'll wait...</textarea
         <h2>Tradeoffs</h2>
         <!-- <p>Should you be running this in the browser?</p> -->
         <!-- <p>We talked about the positives - security, privacy, speed, etc.</p> -->
-        <p>
-          There are some tradeoffs to consider:
-        </p>
-          <ul class="build">
-            <li>LLM's take up space</li>
-            <li>Currently ONNX has a 2GB model limit</li>
-            <li>A paid LLM might be better</li>
-            <li>Using your user's CPU/GPU leaves much of the experience up to their device</li>
-            <li>Need to consider battery usage</li>
-          </ul>
+        <p>There are some tradeoffs to consider:</p>
+        <ul class="build">
+          <li>LLM's take up space</li>
+          <li>Currently ONNX has a 2GB model limit</li>
+          <li>A paid LLM might be better</li>
+          <li>
+            Using your user's CPU/GPU leaves much of the experience up to their
+            device
+          </li>
+          <li>Need to consider battery usage</li>
+        </ul>
       </article>
-
-
 
       <article>
         <p>
           While JavaScript isn't the best language for AI, there are many cases
           where it makes sense and is the best tool for the job.
         </p>
+        <ul class="build">
+          <li>Speed</li>
+          <li>Security</li>
+          <li>Privacy</li>
+          <li>Cost</li>
+          <li>Workflow</li>
+        </ul>
       </article>
 
       <article>

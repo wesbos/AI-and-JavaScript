@@ -10,7 +10,7 @@ const app = document.querySelector<HTMLDivElement>("#tts");
 
 function populateVoices() {
   const voices = tts.voices
-  const selectOptionHTML = Object.entries(voices).map(([key, value]) => `<option value="${key}">${value.name} - ${value.traits}</option>`).join("");
+  const selectOptionHTML = Object.entries(voices).map(([key, value]) => `<option value="${key}" ${key === 'bm_george' ? 'selected' : ''}>${value.name} ${value.traits ? `- ${value.traits}` : ""}</option>`).join("");
   console.log(selectOptionHTML);
   voicesSelect.innerHTML = selectOptionHTML;
 }
