@@ -7,6 +7,7 @@
     <link rel="icon" href="https://fav.farm/👨‍💻" />
     <title>JavaScript & AI</title>
     <!-- <script type="module" src="./spanran-wrap.ts"></script> -->
+    <script type="module" src="./autoplay.ts"></script>
   </head>
 
   <body>
@@ -18,7 +19,7 @@
         <p>Wes Bos × @wesbos × wesbos.com</p>
       </article>
 
-      <article style="align-content: center; grid-auto-rows: auto">
+      <!-- <article style="align-content: center; grid-auto-rows: auto">
         <h1>Hi, I'm Wes Bos</h1>
         <p class="sub">Hamilton, On 🇨🇦</p>
         <p class="sub">
@@ -38,11 +39,10 @@
             <p>syntax.fm × @syntaxfm × sentry</p>
           </div>
         </div>
-      </article>
+      </article> -->
 
       <article>
-        <h2>Using AI</h2>
-        <p>Two popular paths</p>
+        <h2>Using AI <em>with</em> JavaScript</h2>
       </article>
 
       <article>
@@ -72,8 +72,8 @@
 
       <article>
         <h2 style="font-size: 5.5rem">
-          While much of the AI world is built on Python, advancements in JS mean
-          we can run many models in JavaScript!
+          While much of the AI world is built on Python, advancements in web
+          tech mean we can run many models in JavaScript!
         </h2>
       </article>
 
@@ -106,12 +106,7 @@
       </article>
 
       <article>
-        <h2>Speech Recognition</h2>
-        <a href="https://huggingface.co/spaces/Xenova/realtime-whisper-webgpu">
-          [whisper web]
-        </a>
-        <!-- TODO2: Embed an example -->
-        <img src="./images/whisper.png" alt="" class="fit" />
+        <video src="/videos/whisper.mp4" autoplay muted loop></video>
       </article>
 
       <article>
@@ -135,11 +130,24 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       <article>
         <p class="reason">Reason #2</p>
         <h1>Security & Privacy</h1>
-        <p>Uploading your data to a random website might not be a good idea</p>
+        <p>Uploading your data to a random website might not be a good idea.</p>
+      </article>
+
+      <article>
+        <img src="./images/kyle.jpeg" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="./images/removebg.png" alt="" class="fit" />
+      </article>
+
+      <article>
+        <img src="./images/not-free.png" alt="" class="fit" />
       </article>
 
       <article>
         <video src="/videos/bg-remover-clip.mp4" autoplay muted loop></video>
+        <p>Local First, available offline, free!</p>
       </article>
 
       <article>
@@ -167,10 +175,10 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       </article>
 
       <!-- TODO: Find a spot for this -->
-      <article>
+      <!-- <article>
         <h2>Image Segmentation</h2>
         <img src="./images/segmentation.png" alt="" />
-      </article>
+      </article> -->
 
       <!-- TODO: Make this fit -->
       <article>
@@ -186,10 +194,6 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
         <p class="reason">Reason #4</p>
         <h1>When the AI needs to be part of the UI</h1>
       </article>
-      <!--
-      <article>
-        <video src="./videos/face-mesh.mp4" autoplay muted loop></video>
-      </article> -->
 
       <article>
         <h2>MediaPipe</h2>
@@ -201,12 +205,17 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       </article>
 
       <article>
-        <video src="./videos/depth.mp4" autoplay muted loop></video>
+        <img src="./images/sapiens-depth.png" alt="" class="wide" />
       </article>
 
       <article>
-        <img src="./images/sapiens-depth.png" alt="" class="wide" />
+        <video src="./videos/depth.mp4" autoplay muted loop></video>
       </article>
+
+      <!--
+      <article>
+        <video src="./videos/face-mesh.mp4" autoplay muted loop></video>
+      </article> -->
 
       <article>
         <p class="reason">Reason #5</p>
@@ -218,7 +227,7 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       </article>
 
       <article>
-        <h2>Toxicity Detection</h2>
+        <h2>Sentiment Analysis</h2>
         <img src="./images/toxic.png" alt="" class="fit" />
       </article>
 
@@ -270,10 +279,7 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       </article>
 
       <article>
-        <p>
-          There are <strong>hundreds</strong> thousands of models out there
-          ready to be used.
-        </p>
+        <p>There are thousands of models out there ready to be used.</p>
         <ul class="jumble">
           <li>
             <strong>Natural Language Processing</strong>
@@ -339,8 +345,10 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       <article>
         <h2>GPU Acceleration with WebGPU</h2>
         <p>Models can run on GPU with new WebGPU APIs</p>
-        <p class="sub">Including platforms like Deno!</p>
-        <!-- {SCREENSHOT OF SUPPORT} -->
+      </article>
+      <article>
+        <img src="./images/ryan.png" alt="" class="fit" />
+        <p class="sub">Soon including platforms like Deno!</p>
       </article>
 
       <article>
@@ -367,11 +375,15 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
       </article>
 
       <article>
+        <img src="./images/webgpu-support.png" alt="" class="fit" />
+      </article>
+
+      <article>
         <h2>Tradeoffs</h2>
         <!-- <p>Should you be running this in the browser?</p> -->
         <!-- <p>We talked about the positives - security, privacy, speed, etc.</p> -->
         <p>There are some tradeoffs to consider:</p>
-        <ul class="build">
+        <ul class="build" style="text-wrap: balance">
           <li>LLM's take up space</li>
           <li>Currently ONNX has a 2GB model limit</li>
           <li>A paid LLM might be better</li>
@@ -385,22 +397,17 @@ Hello Paris! I'm a generated voice inside the browser. I sure do love JavaScript
 
       <article>
         <p>
-          While JavaScript isn't the best language for AI, there are many cases
-          where it makes sense and is the best tool for the job.
+          While JavaScript may not be the best language for everything AI, the
+          benefits of <mark>speed</mark>, <mark>security</mark>,
+          <mark>privacy</mark>, <mark>cost</mark>, and <mark>UI</mark> make it a
+          great choice for many apps.
         </p>
-        <ul class="build">
-          <li>Speed</li>
-          <li>Security</li>
-          <li>Privacy</li>
-          <li>Cost</li>
-          <li>Workflow</li>
-        </ul>
       </article>
 
       <article>
-        <h1>That's all!</h1>
-        <p>Go make things.</p>
-        <p>Enjoy the future of how awesome everything is!</p>
+        <p>The best apps are the ones you actually make.</p>
+        <h1>That's Pretty Exciting!</h1>
+        <p>What will you make?</p>
       </article>
 
       <article>

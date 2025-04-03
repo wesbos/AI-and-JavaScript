@@ -39,7 +39,8 @@
 }
 
 mark {
-  background: var(--yellow);
+  background: var(--green);
+  -webkit-text-stroke: 0;
 }
 
 span.word {
@@ -85,7 +86,8 @@ body {
   background-repeat: no-repeat;
   --w: 2220px;
   --h: 1180px;
-  background-size: var(--w) var(--h);
+  /* background-size: var(--w) var(--h); */
+  background-size: cover;
   font-family: "swell", "Inter", sans-serif;
   overflow: hidden;
 }

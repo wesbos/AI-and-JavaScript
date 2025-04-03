@@ -11,7 +11,6 @@ const app = document.querySelector<HTMLDivElement>("#tts");
 function populateVoices() {
   const voices = tts.voices
   const selectOptionHTML = Object.entries(voices).map(([key, value]) => `<option value="${key}" ${key === 'bm_george' ? 'selected' : ''}>${value.name} ${value.traits ? `- ${value.traits}` : ""}</option>`).join("");
-  console.log(selectOptionHTML);
   voicesSelect.innerHTML = selectOptionHTML;
 }
 
@@ -31,7 +30,7 @@ async function generate() {
   const blob = audio.toBlob();
   const url = URL.createObjectURL(blob);
 
-  stats.textContent = `Done in ~${Math.round((end - start) / 1000)}s`;
+  stats.textContent = `Done in ~${Math.round((end - start))}ms`;
   audioElement.src = url;
   audioElement.play();
 }
